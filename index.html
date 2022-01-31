@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/main.css" />
+        <script
+            src="https://kit.fontawesome.com/3a4a79daf0.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>Hmm UI-kit</title>
+    </head>
+    <body>
+        <h1>Hmm-UI-Kit</h1>
+        <section class="container">
+            <h2>Inputs</h2>
+            <div class="container__wrap">
+                <label class="hmm__label --input" for="input1"
+                    >Default input</label
+                >
+                <input
+                    class="hmm__input"
+                    id="input1"
+                    type="text"
+                    placeholder="input"
+                />
+            </div>
+            <div class="container__wrap">
+                <label class="hmm__label --input" for="input1"
+                    >Disabled input</label
+                >
+                <input
+                    class="hmm__input"
+                    id="input1"
+                    type="text"
+                    placeholder="input"
+                    disabled
+                />
+            </div>
+            <div class="container__wrap">
+                <label class="hmm__label --input" for="input1"
+                    >Read only input</label
+                >
+                <input
+                    class="hmm__input"
+                    id="input1"
+                    type="text"
+                    placeholder="readonly"
+                    value="readonly"
+                    readonly
+                />
+            </div>
+            <div class="container__wrap">
+                <label class="hmm__label --input" for="input1"
+                    >Input with icon on background</label
+                >
+                <div class="hmm__inputgroup">
+                    <i class="fas fa-key hmm__inputgroup-iconBG--L"></i>
+                    <input
+                        class="hmm__input"
+                        id="input1"
+                        type="text"
+                        placeholder="iconBG"
+                    />
+                </div>
+            </div>
+            <div class="container__wrap">
+                <label class="hmm__label --input" for="input1"
+                    >Input with icon
+                </label>
+                <div class="hmm__inputgroup">
+                    <i class="fas fa-key hmm__inputgroup-icon"></i>
+                    <input
+                        class="hmm__input"
+                        id="input1"
+                        type="text"
+                        placeholder="icon"
+                    />
+                </div>
+            </div>
+            <div class="container__wrap">
+                <label class="hmm__label --input" for="input1"
+                    >Input with right icon
+                </label>
+                <div class="hmm__inputgroup">
+                    <input
+                        class="hmm__input"
+                        id="input1"
+                        type="text"
+                        placeholder="icon"
+                    />
+                    <i class="fas fa-key hmm__inputgroup-icon"></i>
+                </div>
+            </div>
+            <div class="container__wrap">
+                <label class="hmm__label --input" for="input1"
+                    >Input with multiply icons
+                </label>
+                <div class="hmm__inputgroup">
+                    <i class="fas fa-key hmm__inputgroup-iconBG"></i>
+                    <i class="fas fa-key hmm__inputgroup-icon"></i>
+                    <input
+                        class="hmm__input"
+                        id="input1"
+                        type="text"
+                        placeholder="icon"
+                    />
+                    <i class="fas fa-key hmm__inputgroup-iconBG--R"></i>
+                    <i class="fas fa-key hmm__inputgroup-icon"></i>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
