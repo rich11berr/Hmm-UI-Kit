@@ -403,12 +403,32 @@ body h1 {
   text-align: center;
   margin: 20px auto; }
 
-h2 {
-  text-align: center; }
+.nav {
+  width: 80%;
+  margin: 20px auto;
+  display: inline-flex;
+  justify-content: space-around;
+  list-style: none; }
+  .nav__btn {
+    cursor: pointer;
+    font-size: 40px;
+    font-weight: 500;
+    color: #000;
+    transition: all 0.15s ease-in-out; }
+
+.active {
+  transform: scale(1.2); }
+
+.description {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 400;
+  display: block; }
 
 .container {
   width: 90%;
-  margin: 20px auto; }
+  margin: 20px auto;
+  display: none; }
   .container__wrap {
     margin-bottom: 40px;
     border-bottom: 1px solid transparent; }
