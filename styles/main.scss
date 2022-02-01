@@ -3,7 +3,8 @@
 
 //input
 @import "./input/input.scss";
-
+//button
+@import "./button/button.scss";
 * {
     font-family: "Poppins", sans-serif;
 }
@@ -13,13 +14,14 @@ body h1 {
     margin: 20px auto;
 }
 
+h2 {
+    text-align: center;
+}
+
 .container {
     width: 90%;
     margin: 20px auto;
 
-    h2 {
-        text-align: center;
-    }
     &__wrap {
         margin-bottom: 40px;
         border-bottom: 1px solid transparent;
@@ -31,6 +33,7 @@ body h1 {
         width: 200px;
         height: 30px;
     }
+
     &-label {
         width: max-content;
         height: 40px;
