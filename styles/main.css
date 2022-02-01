@@ -357,6 +357,45 @@ template {
     bottom: 30px;
     font-size: 20px; }
 
+.hmm__button {
+  width: max-content;
+  height: 40px;
+  color: #000;
+  border-radius: 0.25rem;
+  padding: 10px 25px;
+  font-weight: 500;
+  background-color: #dadada;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  outline: none;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px; }
+  .hmm__button:hover {
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    background-color: #fff; }
+  .hmm__button:active {
+    transform: scale(1.05); }
+
+.--red {
+  background-color: #cf5644; }
+  .--red:hover {
+    background-color: #f06c58; }
+
+.--green {
+  background-color: #329642; }
+  .--green:hover {
+    background-color: #5cbb6c; }
+
+.--black {
+  background-color: #1c1c1c;
+  color: #fff; }
+  .--black:hover {
+    background-color: #3a3a3a; }
+
 * {
   font-family: "Poppins", sans-serif; }
 
