@@ -396,72 +396,104 @@ template {
   .--black:hover {
     background-color: #3a3a3a; }
 
-.dropdown__group {
-  margin: 20px auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem; }
-
-.dropdown {
-  position: relative; }
-  .dropdown__selected {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 40px;
-    padding: 0 20px 0 10px;
-    font-size: 14px;
-    border: 1px solid red;
+.hmm__dropbox {
+  margin: 50px auto;
+  padding: 32px; }
+  .hmm__dropbox_selectBox {
     position: relative;
-    cursor: pointer;
-    transition: box-shadow 0.3s ease; }
-    .dropdown__selected::after {
-      top: calc(50% - 2px);
-      right: 10px;
-      border: solid transparent;
-      content: "";
-      height: 0;
-      width: 0;
+    display: flex;
+    width: 250px;
+    flex-direction: column; }
+    .hmm__dropbox_selectBox .hmm__option .radio {
+      display: none; }
+    .hmm__dropbox_selectBox .hmm__option:hover {
+      background: #ececec;
+      border-radius: 5px;
+      color: #a5a5a5; }
+    .hmm__dropbox_selectBox input {
+      border-radius: 0.25rem;
+      background-color: #dadada;
+      opacity: 0;
       position: absolute;
-      border-top-color: #000;
-      border-width: 4px;
-      margin-left: -4px; }
-    .dropdown__selected:hover {
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); }
-  .dropdown__menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    border: 1px solid red;
-    border-top: 0;
-    background-color: #fff;
-    z-index: 5;
-    display: none; }
-    .dropdown__menu_items {
-      max-height: 210px;
-      overflow-y: auto; }
-    .dropdown__menu_search {
-      display: block;
-      width: 100%;
-      border: 0;
-      border-bottom: 1px solid #000;
-      padding: 12px;
+      z-index: 100;
+      padding: 0.375rem 0.75rem;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: black;
+      background-clip: padding-box;
+      border: none;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out;
       outline: 0;
-      background-color: #f9f9f9; }
-    .dropdown__menu_item {
-      padding: 10px;
-      border-bottom: 1px solid #000;
-      font-size: 14px;
-      cursor: pointer; }
-      .dropdown__menu_item:last-child {
-        border-bottom: 0; }
-      .dropdown__menu_item:hover {
-        background-color: yellowgreen; }
-      .dropdown__menu_item .selected,
-      .dropdown__menu_item .selected:hover {
-        background-color: lightblue; }
+      margin-top: 15px; }
+      .hmm__dropbox_selectBox input::placeholder {
+        color: #212529;
+        opacity: 0.4; }
+      .hmm__dropbox_selectBox input:focus {
+        background-color: #fff;
+        border-color: #bdbdbd;
+        outline: 0;
+        box-shadow: 13px 7px 39px -2px rgba(0, 0, 0, 0.22); }
+
+.hmm__option,
+.hmm__selected {
+  padding: 12px 24px;
+  cursor: pointer; }
+
+.hmm__selected {
+  color: #000;
+  border-radius: 0.25rem;
+  padding: 10px 25px;
+  font-weight: 500;
+  background-color: #dadada;
+  position: relative;
+  order: 0; }
+  .hmm__selected:hover {
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    background-color: #fff; }
+  .hmm__selected:after {
+    content: "\f106";
+    position: absolute;
+    right: 20px;
+    font-family: "Font Awesome 5 free";
+    font-weight: 700;
+    color: black;
+    transform: rotateX(180deg);
+    transition: all 0.4s; }
+
+.hmm__option_container {
+  background: white;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  order: 1;
+  color: #383434;
+  opacity: 0;
+  pointer-events: none;
+  margin-top: 50px; }
+  .hmm__option_container::-webkit-scrollbar-thumb {
+    background: #464749;
+    border-radius: 8px; }
+  .hmm__option_container::-webkit-scrollbar {
+    background: #888;
+    border-radius: 8px;
+    width: 7px; }
+
+.hmm__search-box input {
+  pointer-events: none; }
+
+.active {
+  opacity: 1;
+  max-height: 240px;
+  overflow-y: scroll;
+  transition: all 0.4s;
+  pointer-events: all; }
+  .active ~ .hmm__selected::after {
+    transform: rotateY(180deg); }
+  .active ~ .hmm__search-box input {
+    opacity: 1;
+    pointer-events: all; }
 
 * {
   font-family: "Poppins", sans-serif; }
