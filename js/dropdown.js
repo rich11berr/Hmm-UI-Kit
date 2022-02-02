@@ -20,7 +20,7 @@ searchBox.addEventListener("keyup", function (e) {
     filterList(e.target.value);
 });
 const filterList = (searchTerm) => {
-    // searchTerm =searchTerm.toLowerCase();
+    searchTerm = searchTerm.toLowerCase();
     optionList.forEach((option) => {
         let label =
             option.firstElementChild.nextElementSibling.innerText.toLowerCase();
