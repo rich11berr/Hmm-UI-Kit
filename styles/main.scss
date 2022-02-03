@@ -7,7 +7,8 @@
 @import "./button/button.scss";
 //dropdown
 @import "./dropDown/dropdown.scss";
-@import "./radio_checkobx/radio_checkbox.scss";
+//radio&check
+@import "./radio_checkox/radio_checkbox.scss";
 
 * {
     font-family: "Poppins", sans-serif;
@@ -59,4 +60,10 @@ body h1 {
         width: max-content;
         height: 40px;
     }
+}
+
+.radio {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }

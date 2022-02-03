@@ -1,0 +1,57 @@
+.hmm__checkbox {
+    position: absolute;
+    opacity: 0;
+
+    & + label {
+        position: relative;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    & + label:before {
+        content: "";
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: text-top;
+        width: 20px;
+        height: 20px;
+        background: rgb(218, 218, 218);
+        border-radius: 0.2rem;
+    }
+
+    &:hover + label:before {
+        background-color: rgb(158, 233, 161);
+    }
+
+    &:focus + label:before {
+        box-shadow: 13px 7px 39px -2px rgba(0, 0, 0, 0.22);
+    }
+
+    &:checked + label:before {
+        background: rgb(158, 233, 161);
+    }
+
+    &:disabled + label {
+        color: #b8b8b8;
+        cursor: default;
+    }
+
+    &:disabled + label:before {
+        box-shadow: none;
+        background: #ddd;
+    }
+
+    &:checked + label:after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        top: 9px;
+        background: black;
+        width: 2px;
+        height: 2px;
+        box-shadow: 2px 0 0 rgb(15, 15, 15), 4px 0 0 rgb(15, 15, 15),
+            4px -2px 0 rgb(15, 15, 15), 4px -4px 0 rgb(15, 15, 15),
+            4px -6px 0 rgb(15, 15, 15), 4px -8px 0 rgb(15, 15, 15);
+        transform: rotate(45deg);
+    }
+}
