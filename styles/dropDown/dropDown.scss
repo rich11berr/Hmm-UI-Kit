@@ -1,6 +1,33 @@
 .hmm__dropbox {
     margin: 50px auto;
     padding: 32px;
+    position: relative;
+
+    &_clear,
+    &_del {
+        position: absolute;
+        left: 290px;
+        top: 35px;
+        border-radius: 0.25rem;
+        background-color: rgb(218, 218, 218);
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        height: 25px;
+        width: 50px;
+        text-align: center;
+        cursor: pointer;
+        display: none;
+        &:hover {
+            background-color: #fff;
+            border-color: #bdbdbd;
+            outline: 0;
+            box-shadow: 13px 7px 39px -2px rgba(0, 0, 0, 0.22);
+        }
+    }
+    &_del {
+        left: 350px;
+    }
 
     &_selectBox {
         position: relative;
@@ -96,6 +123,7 @@
     opacity: 0;
     pointer-events: none;
     margin-top: 50px;
+    // position: absolute;
 
     &::-webkit-scrollbar-thumb {
         background: #464749;
