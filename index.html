@@ -43,6 +43,21 @@
             <div class="container__wrap">
                 <div class="hmm__inputgroup">
                     <label class="hmm__inputgroup-label" for="input1"
+                        >Input with mask</label
+                    >
+                    <input
+                        class="hmm__inputgroup-input"
+                        id="input1"
+                        type="tel"
+                        placeholder="telephone mask"
+                        data-tel-input
+                        maxlength="18"
+                    />
+                </div>
+            </div>
+            <div class="container__wrap">
+                <div class="hmm__inputgroup">
+                    <label class="hmm__inputgroup-label" for="input1"
                         >Disabled input</label
                     >
                     <input
@@ -261,7 +276,8 @@
                 </div>
             </div>
         </section>
-        <script defer src="./js/slide.js"></script>
+        <script src="./js/slide.js"></script>
         <script src="./js/dropdown.js"></script>
+        <script src="./js/telMask.js"></script>
     </body>
 </html>
