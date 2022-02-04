@@ -403,17 +403,22 @@ template {
   .hmm__dropbox_clear, .hmm__dropbox_del {
     position: absolute;
     left: 290px;
-    top: 35px;
+    top: 32px;
     border-radius: 0.25rem;
     background-color: #dadada;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    height: 25px;
+    height: 40px;
     width: 50px;
     text-align: center;
     cursor: pointer;
-    display: none; }
+    display: none;
+    border-top: 1px solid transparent; }
+    .hmm__dropbox_clear span, .hmm__dropbox_del span {
+      position: absolute;
+      left: 3px;
+      top: 5px; }
     .hmm__dropbox_clear:hover, .hmm__dropbox_del:hover {
       background-color: #fff;
       border-color: #bdbdbd;
@@ -672,7 +677,7 @@ body h1 {
   margin: 20px auto;
   display: none; }
   .container__wrap {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     border-bottom: 1px solid transparent; }
 
 .hmm__inputgroup-input {

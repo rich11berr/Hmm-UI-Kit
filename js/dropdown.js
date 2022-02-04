@@ -41,10 +41,10 @@ optionList.forEach((o) => {
             console.log(selected.innerHTML);
             clear.addEventListener("click", () => {
                 selected.innerHTML = selectCheck;
-                clearList;
                 optionsContainer.classList.remove("active");
                 clear.style.display = "none";
                 del.style.display = "none";
+                clearList;
             });
             del.style.display = "block";
             o.style.display = "none";

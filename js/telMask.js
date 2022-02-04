@@ -20,7 +20,6 @@ let onPhoneInput = function (e) {
 
     if (["7", "8", "9"].indexOf(inputValue[0]) > -1) {
         //russian
-        //I'm not racist =)
         if (inputValue[0] == "9") inputValue = "7" + inputValue;
         let firstSymbols = inputValue[0] == "8" ? "8" : "+7";
         formattedValue = firstSymbols + " ";
