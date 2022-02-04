@@ -706,6 +706,61 @@ template {
     bottom: 0.5rem;
     right: 1.2rem; }
 
+.hmm__form {
+  width: 500px;
+  height: 275px;
+  background-color: #dadada;
+  box-shadow: 13px 7px 39px -2px rgba(0, 0, 0, 0.22);
+  position: relative;
+  border-top: 1px solid transparent;
+  border-radius: 0.5rem;
+  position: relative;
+  transition: all 0.4s ease-in-out; }
+  .hmm__form button {
+    position: absolute;
+    left: 2rem;
+    bottom: 0.5rem; }
+  .hmm__form img {
+    height: 64px;
+    order: 1; }
+
+.hmm__fileInput {
+  width: 100%;
+  border-top: 1px solid transparent; }
+  .hmm__fileInput label {
+    background-color: #dadada;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: #000;
+    width: fit-content;
+    height: 40px;
+    border-radius: 0.15rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    display: block;
+    text-align: center;
+    line-height: 2em;
+    padding: 3px; }
+    .hmm__fileInput label:hover {
+      box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+      background-color: #fff; }
+  .hmm__fileInput input {
+    display: none; }
+
+.hmm__filePreview {
+  width: 90%;
+  height: fit-content;
+  background-color: #ececec;
+  border-top: 1px solid transparent;
+  transition: all 0.4s ease-in-out;
+  margin-left: 1rem;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+  .hmm__filePreview p {
+    margin-top: 1rem;
+    margin-left: 1rem; }
+
 * {
   font-family: "Poppins", sans-serif; }
 
