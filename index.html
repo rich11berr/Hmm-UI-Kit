@@ -25,6 +25,9 @@
                 </li>
                 <li class="nav__btn" data-section="tree_section">Tree</li>
                 <li class="nav__btn" data-section="dialog_section">Dialog</li>
+                <li class="nav__btn" data-section="file_section">
+                    File Upload
+                </li>
             </ul>
         </nav>
         <p class="description">Click on menu to see sections of UI kit</p>
@@ -332,10 +335,28 @@
                 </div>
             </div>
         </section>
+        <section class="container" id="file_section">
+            <form class="hmm__form">
+                <div class="hmm__fileInput">
+                    <label for="hmm-upload1">Choose file</label>
+                    <input
+                        type="file"
+                        id="hmm-upload1"
+                        accept=".jpg, .jpeg, .png"
+                        multiple
+                    />
+                </div>
+                <div class="hmm__filePreview" id="filePreview1">
+                    <p>No files currently selected for upload</p>
+                </div>
+                <button class="hmm__button --green">Submit</button>
+            </form>
+        </section>
         <script src="./js/slide.js"></script>
         <script src="./js/dropdown.js"></script>
         <script src="./js/telMask.js"></script>
         <script src="./js/tree.js"></script>
         <script src="./js/dialog.js"></script>
+        <script src="./js/fileUpload.js"></script>
     </body>
 </html>
