@@ -676,6 +676,36 @@ template {
 .caret-down::before {
   transform: rotate(90deg); }
 
+.hmm__dialog {
+  width: 500px;
+  height: 200px;
+  background-color: #dadada;
+  box-shadow: 13px 7px 39px -2px rgba(0, 0, 0, 0.22);
+  position: relative;
+  text-align: center;
+  border-top: 1px solid transparent;
+  border-radius: 0.5rem; }
+  .hmm__dialog_close {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    cursor: pointer; }
+    .hmm__dialog_close:hover {
+      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(79deg) brightness(106%) contrast(101%); }
+  .hmm__dialog_text {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .hmm__dialog_btnWrap {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    bottom: 0.5rem;
+    right: 1.2rem; }
+
 * {
   font-family: "Poppins", sans-serif; }
 
