@@ -647,6 +647,35 @@ template {
     height: 30px;
     border-radius: 25px; }
 
+.hmm__tree {
+  list-style: none; }
+  .hmm__tree li,
+  .hmm__tree span {
+    font-size: 1.2rem;
+    margin-top: 0.25rem;
+    padding: 0.12rem;
+    font-weight: 500; }
+  .hmm__tree_caret {
+    cursor: pointer;
+    user-select: none; }
+    .hmm__tree_caret::before {
+      content: "\25B6";
+      display: inline-block;
+      margin-right: 6px;
+      font-size: inherit;
+      transition: all 0.2s ease-in-out;
+      color: #aaaaaa;
+      box-shadow: 13px 7px 39px -2px rgba(0, 0, 0, 0.22); }
+  .hmm__tree_nested {
+    list-style: none;
+    display: none; }
+
+.tree-active {
+  display: block; }
+
+.caret-down::before {
+  transform: rotate(90deg); }
+
 * {
   font-family: "Poppins", sans-serif; }
 
@@ -662,7 +691,7 @@ body h1 {
   list-style: none; }
   .nav__btn {
     cursor: pointer;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 500;
     color: #000; }
 
