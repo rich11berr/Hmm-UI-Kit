@@ -28,6 +28,9 @@
                 <li class="nav__btn" data-section="file_section">
                     File Upload
                 </li>
+                <li class="nav__btn" data-section="dragDrop_section">
+                    Drag&Drop table
+                </li>
             </ul>
         </nav>
         <p class="description">Click on menu to see sections of UI kit</p>
@@ -352,11 +355,22 @@
                 <button class="hmm__button --green">Submit</button>
             </form>
         </section>
+        <section class="container" id="dragDrop_section">
+            <div class="dragZone hmm__dragzone">
+                <p class="hmm__draggable" draggable="true">1</p>
+                <p class="hmm__draggable" draggable="true">2</p>
+            </div>
+            <div class="dragZone hmm__dragzone">
+                <p class="hmm__draggable" draggable="true">3</p>
+                <p class="hmm__draggable" draggable="true">4</p>
+            </div>
+        </section>
         <script src="./js/slide.js"></script>
         <script src="./js/dropdown.js"></script>
         <script src="./js/telMask.js"></script>
         <script src="./js/tree.js"></script>
         <script src="./js/dialog.js"></script>
         <script src="./js/fileUpload.js"></script>
+        <script src="./js/dragDrop.js"></script>
     </body>
 </html>
