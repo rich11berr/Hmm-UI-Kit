@@ -28,10 +28,10 @@ body h1 {
 }
 
 .nav {
-    width: 80%;
+    width: 90%;
     margin: 20px auto;
     display: inline-flex;
-    justify-content: space-around;
+    gap: 30px;
     list-style: none;
     &__btn {
         cursor: pointer;
@@ -92,5 +92,53 @@ body h1 {
         height: 60px;
         background-color: #fff;
         border-radius: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 1458px) {
+    .nav {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        justify-content: none;
+
+        &__btn {
+            font-size: 15px;
+        }
+    }
+    .hmm__form {
+        width: 60%;
+
+        & button {
+            width: 1.2rem;
+            height: auto;
+            font-size: 0.75rem;
+        }
+    }
+}
+
+@media screen and (max-width: 698px) {
+    .nav {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .hmm__form {
+        font-size: 13px;
+    }
+
+    .hmm__dialog {
+        width: 60%;
+        font-size: 15px;
+
+        & button {
+            width: 1.2rem;
+            height: auto;
+            font-size: 0.75rem;
+        }
+    }
+
+    .hmm__dropbox {
+        margin: 1rem auto;
     }
 }
