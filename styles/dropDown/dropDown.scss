@@ -93,6 +93,10 @@
     background-color: rgb(218, 218, 218);
     position: relative;
     order: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: center;
 
     &:hover {
         box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
@@ -111,6 +115,18 @@
         transform: rotateX(180deg);
         transition: all 0.4s;
     }
+
+    &_span {
+        padding: 0.25rem;
+        font-weight: 500;
+        border-radius: 0.25rem;
+        background-color: #329642;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            background-color: #cf5644;
+        }
+    }
 }
 
 .hmm__option_container {
@@ -123,7 +139,6 @@
     opacity: 0;
     pointer-events: none;
     margin-top: 50px;
-    // position: absolute;
 
     &::-webkit-scrollbar-thumb {
         background: #464749;
