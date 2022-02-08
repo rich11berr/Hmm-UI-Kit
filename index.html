@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/main.css" />
+        <script
+            src="https://kit.fontawesome.com/3a4a79daf0.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>Hmm UI-kit</title>
+    </head>
+    <body>
+        <h1>Hmm-UI-Kit</h1>
+        <nav>
+            <ul class="nav">
+                <li class="nav__btn" data-section="input-section">Input</li>
+                <li class="nav__btn" data-section="button-section">Button</li>
+                <li class="nav__btn" data-section="dropdown_section">
+                    Dropdown
+                </li>
+                <li class="nav__btn" data-section="radioCheck_section">
+                    Radio&Checkbox
+                </li>
+                <li class="nav__btn" data-section="tree_section">Tree</li>
+                <li class="nav__btn" data-section="dialog_section">Dialog</li>
+                <li class="nav__btn" data-section="file_section">
+                    File Upload
+                </li>
+                <li class="nav__btn" data-section="dragDrop_section">
+                    Drag&Drop table
+                </li>
+            </ul>
+        </nav>
+        <p class="description">Click on menu to see sections of UI kit</p>
+        <section class="container" id="input-section">
+            <div class="container__wrap">
+                <div class="hmm__inputgroup">
+                    <label class="hmm__inputgroup-label" for="input1"
+                        >Default input</label
+                    >
+                    <input
+                        class="hmm__inputgroup-input"
+                        id="input1"
+                        type="text"
+                        placeholder="input"
+                    />
+                </div>
+            </div>
+            <div class="container__wrap">
+                <div class="hmm__inputgroup">
+                    <label class="hmm__inputgroup-label" for="input1"
+                        >Input with mask</label
+                    >
+                    <input
+                        class="hmm__inputgroup-input"
+                        id="input1"
+                        type="tel"
+                        placeholder="telephone mask"
+                        data-tel-input
+                        maxlength="18"
+                    />
+                </div>
+            </div>
+            <div class="container__wrap">
+                <div class="hmm__inputgroup">
+                    <label class="hmm__inputgroup-label" for="input1"
+                        >Disabled input</label
+                    >
+                    <input
+                        class="hmm__inputgroup-input"
+                        id="input1"
+                        type="text"
+                        placeholder="disabled"
+                        disabled
+                    />
+                </div>
+            </div>
+            <div class="container__wrap">
+                <div class="hmm__inputgroup">
+                    <label class="hmm__inputgroup-label" for="input1"
+                        >Read only input</label
+                    >
+                    <input
+                        class="hmm__inputgroup-input"
+                        id="input1"
+                        type="text"
+                        placeholder="readonly"
+                        value="readonly"
+                        readonly
+                    />
+                </div>
+            </div>
+            <div class="container__wrap">
+                <div class="hmm__inputgroup">
+                    <label class="hmm__inputgroup-label" for="input1"
+                        >Input with icon on background</label
+                    >
+                    <i class="fas fa-key hmm__inputgroup-iconBG--L"></i>
+                    <input
+                        class="hmm__inputgroup-input"
+                        id="input1"
+                        type="text"
+                        placeholder="iconBG"
+                    />
+                </div>
+            </div>
+            <div class="container__wrap">
+                <div class="hmm__inputgroup">
+                    <label class="hmm__inputgroup-label" for="input1"
+                        >Input with icon
+                    </label>
+                    <i class="fas fa-key hmm__inputgroup-icon"></i>
+                    <input
+                        class="hmm__inputgroup-input"
+                        id="input1"
+                        type="text"
+                        placeholder="icon"
+                    />
+                </div>
+            </div>
+            <div class="container__wrap">
+                <div class="hmm__inputgroup">
+                    <label class="hmm__inputgroup-label" for="input1"
+                        >Input with right icon
+                    </label>
+                    <input
+                        class="hmm__inputgroup-input"
+                        id="input1"
+                        type="text"
+                        placeholder="icon"
+                    />
+                    <i class="fas fa-key hmm__inputgroup-iconBG"></i>
+                </div>
+            </div>
+            <div class="container__wrap">
+                <div class="hmm__inputgroup">
+                    <label class="hmm__inputgroup-label" for="input1"
+                        >Input with multiply icons
+                    </label>
+                    <i class="fas fa-key hmm__inputgroup-icon"></i>
+                    <i class="fas fa-key hmm__inputgroup-iconBG"></i>
+                    <input
+                        class="hmm__inputgroup-input"
+                        id="input1"
+                        type="text"
+                        placeholder="icon"
+                    />
+                    <i class="fas fa-key hmm__inputgroup-iconBG"></i>
+                </div>
+            </div>
+        </section>
+        <section class="container" id="button-section">
+            <div class="container__wrap">
+                <button class="hmm__button .">Default button</button>
+            </div>
+            <div class="container__wrap">
+                <button class="hmm__button --red">Colored button</button>
+                <button class="hmm__button --green">Colored button</button>
+                <button class="hmm__button --black">Colored button</button>
+            </div>
+            <div class="container__wrap">
+                <button class="hmm__button">
+                    Button with icon<i class="fas fa-check"></i>
+                </button>
+                <button class="hmm__button">
+                    Button with icon <i class="fas fa-power-off"></i>
+                </button>
+            </div>
+        </section>
+        <section class="container" id="dropdown_section">
+            <div class="hmm__dropbox" data-single>
+                <div class="hmm__dropbox_selectBox">
+                    <div class="hmm__option_container">
+                        <div class="hmm__option">
+                            <input type="radio" class="radio" />
+                            <label>Disgusting men</label>
+                        </div>
+                        <div class="hmm__option">
+                            <input type="radio" class="radio" />
+                            <label>Не занесли</label>
+                        </div>
+                        <div class="hmm__option">
+                            <input type="radio" class="radio" />
+                            <label>Zavtracast</label>
+                        </div>
+                        <div class="hmm__option">
+                            <input type="radio" class="radio" />
+                            <label>BeardyCast</label>
+                        </div>
+                        <div class="hmm__option">
+                            <input type="radio" class="radio" />
+                            <label>Мы обречены</label>
+                        </div>
+                        <div class="hmm__option">
+                            <input type="radio" class="radio" />
+                            <label>Frontend weekend</label>
+                        </div>
+                        <div class="hmm__option">
+                            <input type="radio" class="radio" />
+                            <label>Podlodka</label>
+                        </div>
+                        <div class="hmm__option">
+                            <input type="radio" class="radio" />
+                            <label>КритМышь</label>
+                        </div>
+                    </div>
+                    <div class="hmm__selected">Select a podcast</div>
+                    <div class="hmm__search-box">
+                        <input type="text " placeholder="Search..." />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container" id="radioCheck_section">
+            <div class="container__wrap radio">
+                <input
+                    type="checkbox"
+                    id="hmm-checkbox1"
+                    class="hmm__checkbox"
+                />
+                <label for="hmm-checkbox1">Checkbox 1</label>
+                <input
+                    type="checkbox"
+                    id="hmm-checkbox2"
+                    class="hmm__checkbox"
+                    checked
+                />
+                <label for="hmm-checkbox2">Checkbox 2</label>
+                <input
+                    type="checkbox"
+                    id="hmm-checkbox3"
+                    class="hmm__checkbox"
+                />
+                <label for="hmm-checkbox3">Checkbox 3</label>
+                <input
+                    type="checkbox"
+                    id="hmm-checkbox4"
+                    class="hmm__checkbox"
+                    disabled
+                />
+                <label for="hmm-checkbox4">Disabled</label>
+            </div>
+            <div class="container__wrap radio">
+                <input
+                    type="radio"
+                    id="hmm-radio1"
+                    class="hmm__radio"
+                    value="1"
+                    name="hmm"
+                />
+                <label for="hmm-radio1">Radio 1</label>
+                <input
+                    type="radio"
+                    id="hmm-radio2"
+                    class="hmm__radio"
+                    value="2"
+                    name="hmm"
+                />
+                <label for="hmm-radio2">Radio 2</label>
+                <input
+                    type="radio"
+                    id="hmm-radio3"
+                    class="hmm__radio"
+                    value="3"
+                    name="hmm"
+                />
+                <label for="hmm-radio3">Radio 3</label>
+                <input
+                    type="radio"
+                    id="hmm-radio4"
+                    class="hmm__radio"
+                    value="3"
+                    name="hmm"
+                    disabled
+                />
+                <label for="hmm-radio4">Disabled</label>
+            </div>
+            <div class="container__wrap radio">
+                <div class="hmm__switcher">
+                    <input type="checkbox" id="hmm-switcher1" />
+                    <label for="hmm-switcher1"></label>
+                </div>
+            </div>
+        </section>
+        <section class="container" id="tree_section">
+            <ul class="hmm__tree">
+                <li>
+                    <span class="hmm__tree_caret">Drinks</span>
+                    <ul class="hmm__tree_nested">
+                        <li>Water</li>
+                        <li>Mineral water</li>
+                        <li>
+                            <span class="hmm__tree_caret">Soda</span>
+                            <ul class="hmm__tree_nested">
+                                <li>Coca-Cola</li>
+                                <li>Sprite</li>
+                                <li>Fanta</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="hmm__tree_caret">Juice</span>
+                            <ul class="hmm__tree_nested">
+                                <li>Apple juice</li>
+                                <li>Orange juice</li>
+                                <li>Grape juice</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="hmm__tree_caret">Food</span>
+                    <ul class="hmm__tree_nested">
+                        <li>Hamburger</li>
+                        <li>
+                            <span class="hmm__tree_caret">Pizza</span>
+                            <ul class="hmm__tree_nested">
+                                <li>Pizza with pineapple</li>
+                                <li>Pizza with beef</li>
+                                <li>Pizza with salami</li>
+                            </ul>
+                        </li>
+                        <li>Sushi</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section class="container" id="dialog_section">
+            <div class="hmm__dialog">
+                <i class="fas fa-times hmm__dialog_close"></i>
+                <span class="hmm__dialog_text">Are you sure about this?</span>
+                <div class="hmm__dialog_btnWrap">
+                    <button class="hmm__button --green">Yes</button>
+                    <button class="hmm__button --red">No</button>
+                </div>
+            </div>
+        </section>
+        <section class="container" id="file_section">
+            <form class="hmm__form">
+                <div class="hmm__fileInput">
+                    <label for="hmm-upload1">Choose file</label>
+                    <input
+                        type="file"
+                        id="hmm-upload1"
+                        accept=".jpg, .jpeg, .png"
+                        multiple
+                    />
+                </div>
+                <div class="hmm__filePreview" id="filePreview1">
+                    <p>No files currently selected for upload</p>
+                </div>
+                <button class="hmm__button --green">Submit</button>
+            </form>
+        </section>
+        <section class="container" id="dragDrop_section">
+            <div class="dragZone hmm__dragzone">
+                <p class="hmm__draggable" draggable="true">1</p>
+                <p class="hmm__draggable" draggable="true">2</p>
+            </div>
+            <div class="dragZone hmm__dragzone">
+                <p class="hmm__draggable" draggable="true">3</p>
+                <p class="hmm__draggable" draggable="true">4</p>
+            </div>
+        </section>
+        <script src="./js/slide.js"></script>
+        <script src="./js/dropdown.js"></script>
+        <script src="./js/telMask.js"></script>
+        <script src="./js/tree.js"></script>
+        <script src="./js/dialog.js"></script>
+        <script src="./js/fileUpload.js"></script>
+        <script src="./js/dragDrop.js"></script>
+    </body>
+</html>
