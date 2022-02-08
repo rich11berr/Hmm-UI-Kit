@@ -460,7 +460,6 @@ template {
       .hmm__dropbox_selectBox input:focus {
         background-color: #fff;
         border-color: #bdbdbd;
-        outline: 0;
         box-shadow: 13px 7px 39px -2px rgba(0, 0, 0, 0.22); }
 
 .hmm__option,
@@ -475,11 +474,7 @@ template {
   font-weight: 500;
   background-color: #dadada;
   position: relative;
-  order: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  align-items: center; }
+  order: 0; }
   .hmm__selected:hover {
     box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
     background-color: #fff; }
@@ -492,14 +487,6 @@ template {
     color: black;
     transform: rotateX(180deg);
     transition: all 0.4s; }
-  .hmm__selected_span {
-    padding: 0.25rem;
-    font-weight: 500;
-    border-radius: 0.25rem;
-    background-color: #329642;
-    transition: all 0.2s ease-in-out; }
-    .hmm__selected_span:hover {
-      background-color: #cf5644; }
 
 .hmm__option_container {
   background: white;
