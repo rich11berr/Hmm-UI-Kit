@@ -32,7 +32,6 @@ function getDragAfterElement(container, y) {
         (closest, child) => {
             let box = child.getBoundingClientRect();
             let offset = y - box.top - box.height / 2;
-
             if (offset < 0 && offset > closest.offset) {
                 return { offset: offset, element: child };
             } else {
