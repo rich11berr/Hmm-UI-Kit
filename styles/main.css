@@ -403,17 +403,22 @@ template {
   .hmm__dropbox_clear, .hmm__dropbox_del {
     position: absolute;
     left: 290px;
-    top: 35px;
+    top: 32px;
     border-radius: 0.25rem;
     background-color: #dadada;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    height: 25px;
+    height: 40px;
     width: 50px;
     text-align: center;
     cursor: pointer;
-    display: none; }
+    display: none;
+    border-top: 1px solid transparent; }
+    .hmm__dropbox_clear span, .hmm__dropbox_del span {
+      position: absolute;
+      left: 3px;
+      top: 5px; }
     .hmm__dropbox_clear:hover, .hmm__dropbox_del:hover {
       background-color: #fff;
       border-color: #bdbdbd;
@@ -529,6 +534,253 @@ template {
     opacity: 1;
     pointer-events: all; }
 
+.hmm__checkbox {
+  position: absolute;
+  opacity: 0; }
+  .hmm__checkbox + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0; }
+  .hmm__checkbox + label:before {
+    content: "";
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: #dadada;
+    border-radius: 0.2rem;
+    transition: all 0.25s ease-in-out; }
+  .hmm__checkbox:hover + label:before {
+    background-color: #9ee9a1; }
+  .hmm__checkbox:focus + label:before {
+    box-shadow: 13px 7px 39px -2px rgba(0, 0, 0, 0.22); }
+  .hmm__checkbox:checked + label:before {
+    background: #9ee9a1;
+    transform: scale(1.13); }
+  .hmm__checkbox:disabled + label {
+    color: #b8b8b8;
+    cursor: default; }
+  .hmm__checkbox:disabled + label:before {
+    box-shadow: none;
+    background: #ddd; }
+
+.hmm__radio {
+  position: absolute;
+  opacity: 0; }
+  .hmm__radio + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0; }
+  .hmm__radio + label:before {
+    content: "";
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 16px;
+    height: 16px;
+    border: 4px solid transparent;
+    background: #dadada;
+    border-radius: 20px;
+    transition: all 0.25s ease-in-out; }
+  .hmm__radio:hover + label:before, .hmm__radio:focus + label:before, .hmm__radio:checked + label:before {
+    background-color: #9ee9a1;
+    box-shadow: 13px 7px 39px -2px rgba(0, 0, 0, 0.22); }
+  .hmm__radio:checked + label:before {
+    transform: scale(1.13); }
+  .hmm__radio:disabled + label {
+    color: #b8b8b8;
+    cursor: default; }
+  .hmm__radio:disabled + label:before {
+    box-shadow: none;
+    background: #ddd; }
+
+.hmm__switcher {
+  position: relative;
+  width: 130px;
+  height: 30px;
+  border-radius: 25px;
+  margin: 20px 0;
+  overflow: hidden;
+  box-shadow: 13px 7px 39px -2px rgba(0, 0, 0, 0.22); }
+  .hmm__switcher input {
+    appearance: none;
+    position: relative;
+    width: 130px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: #919191;
+    outline: none;
+    transition: background-color 0s 0.5s; }
+    .hmm__switcher input:before, .hmm__switcher input:after {
+      z-index: 2;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #9ee9a1; }
+    .hmm__switcher input:before {
+      content: "ON";
+      left: 20px; }
+    .hmm__switcher input:after {
+      content: "OFF";
+      right: 20px; }
+    .hmm__switcher input:before {
+      color: #919191; }
+    .hmm__switcher input:after {
+      color: #9ee9a1; }
+    .hmm__switcher input:checked {
+      background-color: #9ee9a1; }
+      .hmm__switcher input:checked + label {
+        background: #9ee9a1;
+        animation: turn-on 0.5s ease-out; }
+@keyframes turn-on {
+  0% {
+    left: 100%; }
+  100% {
+    left: 0%; } }
+    .hmm__switcher input:not(:checked) {
+      background: #919191; }
+      .hmm__switcher input:not(:checked) + label {
+        background: #919191;
+        animation: turn-off 0.5s ease-out; }
+@keyframes turn-off {
+  0% {
+    right: 100%; }
+  100% {
+    right: 0%; } }
+  .hmm__switcher label {
+    z-index: 1;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    border-radius: 20px;
+    top: 0px;
+    width: 130px;
+    height: 30px;
+    border-radius: 25px; }
+
+.hmm__tree {
+  list-style: none; }
+  .hmm__tree li,
+  .hmm__tree span {
+    font-size: 1.2rem;
+    margin-top: 0.25rem;
+    padding: 0.12rem;
+    font-weight: 500; }
+  .hmm__tree_caret {
+    cursor: pointer;
+    user-select: none; }
+    .hmm__tree_caret::before {
+      content: "\25B6";
+      display: inline-block;
+      margin-right: 6px;
+      font-size: inherit;
+      transition: all 0.2s ease-in-out;
+      color: #aaaaaa;
+      box-shadow: 13px 7px 39px -2px rgba(0, 0, 0, 0.22); }
+  .hmm__tree_nested {
+    list-style: none;
+    display: none; }
+
+.tree-active {
+  display: block; }
+
+.caret-down::before {
+  transform: rotate(90deg); }
+
+.hmm__dialog {
+  width: 500px;
+  height: 200px;
+  background-color: #dadada;
+  box-shadow: 13px 7px 39px -2px rgba(0, 0, 0, 0.22);
+  position: relative;
+  text-align: center;
+  border-top: 1px solid transparent;
+  border-radius: 0.5rem; }
+  .hmm__dialog_close {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    cursor: pointer; }
+    .hmm__dialog_close:hover {
+      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(79deg) brightness(106%) contrast(101%); }
+  .hmm__dialog_text {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .hmm__dialog_btnWrap {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    bottom: 0.5rem;
+    right: 1.2rem; }
+
+.hmm__form {
+  width: 500px;
+  height: 275px;
+  background-color: #dadada;
+  box-shadow: 13px 7px 39px -2px rgba(0, 0, 0, 0.22);
+  position: relative;
+  border-top: 1px solid transparent;
+  border-radius: 0.5rem;
+  position: relative;
+  transition: all 0.4s ease-in-out; }
+  .hmm__form button {
+    position: absolute;
+    left: 2rem;
+    bottom: 0.5rem; }
+  .hmm__form img {
+    height: 64px;
+    order: 1; }
+
+.hmm__fileInput {
+  width: 100%;
+  border-top: 1px solid transparent; }
+  .hmm__fileInput label {
+    background-color: #dadada;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: #000;
+    width: fit-content;
+    height: 40px;
+    border-radius: 0.15rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    display: block;
+    text-align: center;
+    line-height: 2em;
+    padding: 3px; }
+    .hmm__fileInput label:hover {
+      box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+      background-color: #fff; }
+  .hmm__fileInput input {
+    display: none; }
+
+.hmm__filePreview {
+  width: 90%;
+  height: fit-content;
+  background-color: #ececec;
+  border-top: 1px solid transparent;
+  transition: all 0.4s ease-in-out;
+  margin-left: 1rem;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+  .hmm__filePreview p {
+    margin-top: 1rem;
+    margin-left: 1rem; }
+
+.hmm__draggable {
+  cursor: move;
+  transition: transform 0.25s ease-in-out; }
+
+.draggable_active {
+  opacity: 0.5;
+  transform: scale(0.7); }
+
 * {
   font-family: "Poppins", sans-serif; }
 
@@ -537,14 +789,14 @@ body h1 {
   margin: 20px auto; }
 
 .nav {
-  width: 80%;
+  width: 90%;
   margin: 20px auto;
   display: inline-flex;
-  justify-content: space-around;
+  gap: 30px;
   list-style: none; }
   .nav__btn {
     cursor: pointer;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 500;
     color: #000; }
 
@@ -559,7 +811,7 @@ body h1 {
   margin: 20px auto;
   display: none; }
   .container__wrap {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     border-bottom: 1px solid transparent; }
 
 .hmm__inputgroup-input {
@@ -568,3 +820,58 @@ body h1 {
 .hmm__inputgroup-label {
   width: max-content;
   height: 40px; }
+
+.radio {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; }
+
+.dragZone {
+  width: 400px;
+  width: 250px;
+  background-color: #dadada;
+  box-shadow: 13px 7px 39px -2px rgba(0, 0, 0, 0.22);
+  border: 1px solid transparent;
+  margin-top: 30px; }
+  .dragZone p {
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 100px;
+    text-align: center;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 0.5rem; }
+
+@media screen and (max-width: 1458px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: none; }
+    .nav__btn {
+      font-size: 15px; }
+
+  .hmm__form {
+    width: 60%; }
+    .hmm__form button {
+      width: 1.2rem;
+      height: auto;
+      font-size: 0.75rem; } }
+@media screen and (max-width: 698px) {
+  .nav {
+    flex-direction: column;
+    gap: 0.25rem; }
+
+  .hmm__form {
+    font-size: 13px; }
+
+  .hmm__dialog {
+    width: 60%;
+    font-size: 15px; }
+    .hmm__dialog button {
+      width: 1.2rem;
+      height: auto;
+      font-size: 0.75rem; }
+
+  .hmm__dropbox {
+    margin: 1rem auto; } }
