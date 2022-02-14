@@ -23,38 +23,6 @@ const filterList = (searchTerm) => {
     });
 };
 
-// optionList.forEach((o) => {
-//     let selectCheck = selected.innerHTML;
-//     o.addEventListener("click", () => {
-//         if (selected.innerHTML === selectCheck) {
-//             o.remove();
-//             selected.innerHTML = `<span class="hmm__selected_span">${
-//                 o.querySelector("label").innerHTML
-//             }</span>`;
-//             optionsContainer.classList.remove("active");
-//         } else {
-//             o.remove();
-//             selected.innerHTML += `<span class="hmm__selected_span">${
-//                 o.querySelector("label").innerHTML
-//             }</span>`;
-//         }
-//         let items = document.querySelectorAll(".hmm__selected_span");
-//         items.forEach((item) => {
-//             item.addEventListener("click", () => {
-//                 let div = document.createElement("div");
-//                 div.classList.add("hmm__option");
-//                 div.innerHTML = ` <input type="radio" class="radio" />
-//                 <label for="pet">${item.textContent}</label>`;
-//                 optionsContainer.appendChild(div);
-//                 item.remove();
-//                 if (selected.innerHTML == "") {
-//                     selected.innerHTML = selectCheck;
-//                 }
-//             });
-//         });
-//     });
-// });
-
 function optionClick(o) {
     o.addEventListener("click", () => {
         if (selected.innerHTML === selectCheck) {

@@ -1,3 +1,11 @@
+import "../styles/main.scss";
+import "./telMask";
+import "./dialog";
+import "./dragDrop";
+import "./dropdown";
+import "./fileUpload";
+import "./tree";
+
 const sections = document.querySelectorAll(".container");
 
 const descr = document.querySelector(".description");
