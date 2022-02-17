@@ -35,61 +35,48 @@
         <p class="description">Click on menu to see sections of UI kit</p>
         <section class="container" id="input-section">
             <div class="container__wrap">
-                <div class="hmm__inputgroup">
-                    <label class="hmm__inputgroup-label" for="input1"
-                        >Default input</label
-                    >
-                    <input
-                        class="hmm__inputgroup-input"
-                        id="input1"
-                        type="text"
-                        placeholder="input"
-                    />
-                </div>
+                <hmm-input
+                    placeholder-label="Default Input"
+                    type="text"
+                    id="input1"
+                    placeholder="default"
+                ></hmm-input>
             </div>
             <div class="container__wrap">
-                <div class="hmm__inputgroup">
-                    <label class="hmm__inputgroup-label" for="input1"
-                        >Input with mask</label
-                    >
-                    <input
-                        class="hmm__inputgroup-input"
-                        id="input1"
-                        type="tel"
-                        placeholder="telephone mask"
-                        data-tel-input
-                        maxlength="18"
-                    />
-                </div>
+                <hmm-input
+                    placeholder-label="Input with mask"
+                    type="tel"
+                    id="input2"
+                    placeholder="telephone mask"
+                ></hmm-input>
             </div>
             <div class="container__wrap">
-                <div class="hmm__inputgroup">
-                    <label class="hmm__inputgroup-label" for="input1"
-                        >Disabled input</label
-                    >
-                    <input
-                        class="hmm__inputgroup-input"
-                        id="input1"
-                        type="text"
-                        placeholder="disabled"
-                        disabled
-                    />
-                </div>
+                <hmm-input
+                    placeholder-label="Disabled input"
+                    type="text"
+                    id="input3"
+                    placeholder="disabled"
+                    status="disabled"
+                ></hmm-input>
             </div>
             <div class="container__wrap">
-                <div class="hmm__inputgroup">
-                    <label class="hmm__inputgroup-label" for="input1"
-                        >Read only input</label
-                    >
-                    <input
-                        class="hmm__inputgroup-input"
-                        id="input1"
-                        type="text"
-                        placeholder="readonly"
-                        value="readonly"
-                        readonly
-                    />
-                </div>
+                <hmm-input
+                    placeholder-label="Read only"
+                    type="text"
+                    id="input4"
+                    placeholder="readonly"
+                    status="readonly"
+                    value="Readonly"
+                ></hmm-input>
+            </div>
+            <div class="container__wrap">
+                <hmm-input
+                    placeholder-label="Input with icon on background"
+                    type="text"
+                    id="input5"
+                    placeholder="iconBG"
+                >
+                </hmm-input>
             </div>
             <div class="container__wrap">
                 <div class="hmm__inputgroup">
@@ -152,13 +139,14 @@
         </section>
         <section class="container" id="button-section">
             <div class="container__wrap">
-                <button class="hmm__button .">Default button</button>
+                <hmm-button text="Default button"></hmm-button>
             </div>
             <div class="container__wrap">
-                <button class="hmm__button --red">Colored button</button>
-                <button class="hmm__button --green">Colored button</button>
-                <button class="hmm__button --black">Colored button</button>
+                <hmm-button text="Colored button" color="red"></hmm-button>
+                <hmm-button text="Colored button" color="green"></hmm-button>
+                <hmm-button text="Colored button" color="black"></hmm-button>
             </div>
+
             <div class="container__wrap">
                 <button class="hmm__button">
                     Button with icon<i class="fas fa-check"></i>
@@ -169,198 +157,96 @@
             </div>
         </section>
         <section class="container" id="dropdown_section">
-            <div class="hmm__dropbox" data-single>
-                <div class="hmm__dropbox_selectBox">
-                    <div class="hmm__option_container">
-                        <div class="hmm__option">
-                            <input type="radio" class="radio" />
-                            <label>Disgusting men</label>
-                        </div>
-                        <div class="hmm__option">
-                            <input type="radio" class="radio" />
-                            <label>Не занесли</label>
-                        </div>
-                        <div class="hmm__option">
-                            <input type="radio" class="radio" />
-                            <label>Zavtracast</label>
-                        </div>
-                        <div class="hmm__option">
-                            <input type="radio" class="radio" />
-                            <label>BeardyCast</label>
-                        </div>
-                        <div class="hmm__option">
-                            <input type="radio" class="radio" />
-                            <label>Мы обречены</label>
-                        </div>
-                        <div class="hmm__option">
-                            <input type="radio" class="radio" />
-                            <label>Frontend weekend</label>
-                        </div>
-                        <div class="hmm__option">
-                            <input type="radio" class="radio" />
-                            <label>Podlodka</label>
-                        </div>
-                        <div class="hmm__option">
-                            <input type="radio" class="radio" />
-                            <label>КритМышь</label>
-                        </div>
-                    </div>
-                    <div class="hmm__selected">Select a podcast</div>
-                    <div class="hmm__search-box">
-                        <input type="text " placeholder="Search..." />
-                    </div>
-                </div>
-            </div>
+            <drop-down
+                placeholder="Select a podcast"
+                options="Disgusting men, Не занесли,Zavtracast,BeardyCast,Frontend Weekend,Podlodka,КритМышь,Мы обречены"
+                search-placeholder="Search..."
+            ></drop-down>
         </section>
         <section class="container" id="radioCheck_section">
             <div class="container__wrap radio">
-                <input
-                    type="checkbox"
+                <hmm-checkbox
                     id="hmm-checkbox1"
-                    class="hmm__checkbox"
-                />
-                <label for="hmm-checkbox1">Checkbox 1</label>
-                <input
+                    label="Checkbox 1"
                     type="checkbox"
+                    status="checked"
+                    name="hmm1"
+                ></hmm-checkbox>
+                <hmm-checkbox
                     id="hmm-checkbox2"
-                    class="hmm__checkbox"
-                    checked
-                />
-                <label for="hmm-checkbox2">Checkbox 2</label>
-                <input
+                    label="Checkbox 2"
                     type="checkbox"
+                    name="hmm1"
+                ></hmm-checkbox>
+                <hmm-checkbox
                     id="hmm-checkbox3"
-                    class="hmm__checkbox"
-                />
-                <label for="hmm-checkbox3">Checkbox 3</label>
-                <input
+                    label="Checkbox 3"
                     type="checkbox"
+                    name="hmm1"
+                ></hmm-checkbox>
+                <hmm-checkbox
                     id="hmm-checkbox4"
-                    class="hmm__checkbox"
-                    disabled
-                />
-                <label for="hmm-checkbox4">Disabled</label>
+                    label="Checkbox 4"
+                    type="checkbox"
+                    status="disabled"
+                    name="hmm1"
+                ></hmm-checkbox>
             </div>
             <div class="container__wrap radio">
-                <input
+                <hmm-checkbox
+                    id="hmm-checkbox1"
+                    label="Checkbox 1"
                     type="radio"
-                    id="hmm-radio1"
-                    class="hmm__radio"
+                    status="checked"
+                    name="hm1"
                     value="1"
-                    name="hmm"
-                />
-                <label for="hmm-radio1">Radio 1</label>
-                <input
+                ></hmm-checkbox>
+                <hmm-checkbox
+                    id="hmm-checkbox2"
+                    label="Checkbox 2"
                     type="radio"
-                    id="hmm-radio2"
-                    class="hmm__radio"
+                    name="hm1"
                     value="2"
-                    name="hmm"
-                />
-                <label for="hmm-radio2">Radio 2</label>
-                <input
+                ></hmm-checkbox>
+                <hmm-checkbox
+                    id="hmm-checkbox3"
+                    label="Checkbox 3"
                     type="radio"
-                    id="hmm-radio3"
-                    class="hmm__radio"
+                    name="hm1"
                     value="3"
-                    name="hmm"
-                />
-                <label for="hmm-radio3">Radio 3</label>
-                <input
+                ></hmm-checkbox>
+                <hmm-checkbox
+                    id="hmm-checkbox4"
+                    label="Checkbox 4"
                     type="radio"
-                    id="hmm-radio4"
-                    class="hmm__radio"
-                    value="3"
-                    name="hmm"
-                    disabled
-                />
-                <label for="hmm-radio4">Disabled</label>
+                    status="disabled"
+                    name="hm1"
+                    value="4"
+                ></hmm-checkbox>
             </div>
             <div class="container__wrap radio">
-                <div class="hmm__switcher">
-                    <input type="checkbox" id="hmm-switcher1" />
-                    <label for="hmm-switcher1"></label>
-                </div>
+                <hmm-switch></hmm-switch>
             </div>
         </section>
         <section class="container" id="tree_section">
-            <ul class="hmm__tree">
-                <li>
-                    <span class="hmm__tree_caret">Drinks</span>
-                    <ul class="hmm__tree_nested">
-                        <li>Water</li>
-                        <li>Mineral water</li>
-                        <li>
-                            <span class="hmm__tree_caret">Soda</span>
-                            <ul class="hmm__tree_nested">
-                                <li>Coca-Cola</li>
-                                <li>Sprite</li>
-                                <li>Fanta</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span class="hmm__tree_caret">Juice</span>
-                            <ul class="hmm__tree_nested">
-                                <li>Apple juice</li>
-                                <li>Orange juice</li>
-                                <li>Grape juice</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="hmm__tree_caret">Food</span>
-                    <ul class="hmm__tree_nested">
-                        <li>Hamburger</li>
-                        <li>
-                            <span class="hmm__tree_caret">Pizza</span>
-                            <ul class="hmm__tree_nested">
-                                <li>Pizza with pineapple</li>
-                                <li>Pizza with beef</li>
-                                <li>Pizza with salami</li>
-                            </ul>
-                        </li>
-                        <li>Sushi</li>
-                    </ul>
-                </li>
-            </ul>
+            <hmm-tree></hmm-tree>
         </section>
         <section class="container" id="dialog_section">
-            <div class="hmm__dialog">
-                <i class="fas fa-times hmm__dialog_close"></i>
-                <span class="hmm__dialog_text">Are you sure about this?</span>
-                <div class="hmm__dialog_btnWrap">
-                    <button class="hmm__button --green">Yes</button>
-                    <button class="hmm__button --red">No</button>
-                </div>
-            </div>
+            <hmm-dialog
+                yes="Yes"
+                no="No"
+                text="Are you sure about this?"
+            ></hmm-dialog>
         </section>
         <section class="container" id="file_section">
-            <form class="hmm__form">
-                <div class="hmm__fileInput">
-                    <label for="hmm-upload1">Choose file</label>
-                    <input
-                        type="file"
-                        id="hmm-upload1"
-                        accept=".jpg, .jpeg, .png"
-                        multiple
-                    />
-                </div>
-                <div class="hmm__filePreview" id="filePreview1">
-                    <p>No files currently selected for upload</p>
-                </div>
-                <button class="hmm__button --green">Submit</button>
-            </form>
+            <file-upload
+                submitText="Submit"
+                labelText="Choose file"
+                placeholder="No files currently selected for upload"
+            ></file-upload>
         </section>
         <section class="container" id="dragDrop_section">
-            <div class="dragZone hmm__dragzone">
-                <p class="hmm__draggable" draggable="true">1</p>
-                <p class="hmm__draggable" draggable="true">2</p>
-            </div>
-            <div class="dragZone hmm__dragzone">
-                <p class="hmm__draggable" draggable="true">3</p>
-                <p class="hmm__draggable" draggable="true">4</p>
-            </div>
+            <drag-drop options="1 2;3 4;5 6 7"></drag-drop>
         </section>
     </body>
 </html>
