@@ -165,116 +165,71 @@
         </section>
         <section class="container" id="radioCheck_section">
             <div class="container__wrap radio">
-                <input
-                    type="checkbox"
+                <hmm-checkbox
                     id="hmm-checkbox1"
-                    class="hmm__checkbox"
-                />
-                <label for="hmm-checkbox1">Checkbox 1</label>
-                <input
+                    label="Checkbox 1"
                     type="checkbox"
+                    status="checked"
+                    name="hmm1"
+                ></hmm-checkbox>
+                <hmm-checkbox
                     id="hmm-checkbox2"
-                    class="hmm__checkbox"
-                    checked
-                />
-                <label for="hmm-checkbox2">Checkbox 2</label>
-                <input
+                    label="Checkbox 2"
                     type="checkbox"
+                    name="hmm1"
+                ></hmm-checkbox>
+                <hmm-checkbox
                     id="hmm-checkbox3"
-                    class="hmm__checkbox"
-                />
-                <label for="hmm-checkbox3">Checkbox 3</label>
-                <input
+                    label="Checkbox 3"
                     type="checkbox"
+                    name="hmm1"
+                ></hmm-checkbox>
+                <hmm-checkbox
                     id="hmm-checkbox4"
-                    class="hmm__checkbox"
-                    disabled
-                />
-                <label for="hmm-checkbox4">Disabled</label>
+                    label="Checkbox 4"
+                    type="checkbox"
+                    status="disabled"
+                    name="hmm1"
+                ></hmm-checkbox>
             </div>
             <div class="container__wrap radio">
-                <input
+                <hmm-checkbox
+                    id="hmm-checkbox1"
+                    label="Checkbox 1"
                     type="radio"
-                    id="hmm-radio1"
-                    class="hmm__radio"
+                    status="checked"
+                    name="hm1"
                     value="1"
-                    name="hmm"
-                />
-                <label for="hmm-radio1">Radio 1</label>
-                <input
+                ></hmm-checkbox>
+                <hmm-checkbox
+                    id="hmm-checkbox2"
+                    label="Checkbox 2"
                     type="radio"
-                    id="hmm-radio2"
-                    class="hmm__radio"
+                    name="hm1"
                     value="2"
-                    name="hmm"
-                />
-                <label for="hmm-radio2">Radio 2</label>
-                <input
+                ></hmm-checkbox>
+                <hmm-checkbox
+                    id="hmm-checkbox3"
+                    label="Checkbox 3"
                     type="radio"
-                    id="hmm-radio3"
-                    class="hmm__radio"
+                    name="hm1"
                     value="3"
-                    name="hmm"
-                />
-                <label for="hmm-radio3">Radio 3</label>
-                <input
+                ></hmm-checkbox>
+                <hmm-checkbox
+                    id="hmm-checkbox4"
+                    label="Checkbox 4"
                     type="radio"
-                    id="hmm-radio4"
-                    class="hmm__radio"
-                    value="3"
-                    name="hmm"
-                    disabled
-                />
-                <label for="hmm-radio4">Disabled</label>
+                    status="disabled"
+                    name="hm1"
+                    value="4"
+                ></hmm-checkbox>
             </div>
             <div class="container__wrap radio">
-                <div class="hmm__switcher">
-                    <input type="checkbox" id="hmm-switcher1" />
-                    <label for="hmm-switcher1"></label>
-                </div>
+                <hmm-switch></hmm-switch>
             </div>
         </section>
         <section class="container" id="tree_section">
-            <ul class="hmm__tree">
-                <li>
-                    <span class="hmm__tree_caret">Drinks</span>
-                    <ul class="hmm__tree_nested">
-                        <li>Water</li>
-                        <li>Mineral water</li>
-                        <li>
-                            <span class="hmm__tree_caret">Soda</span>
-                            <ul class="hmm__tree_nested">
-                                <li>Coca-Cola</li>
-                                <li>Sprite</li>
-                                <li>Fanta</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span class="hmm__tree_caret">Juice</span>
-                            <ul class="hmm__tree_nested">
-                                <li>Apple juice</li>
-                                <li>Orange juice</li>
-                                <li>Grape juice</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="hmm__tree_caret">Food</span>
-                    <ul class="hmm__tree_nested">
-                        <li>Hamburger</li>
-                        <li>
-                            <span class="hmm__tree_caret">Pizza</span>
-                            <ul class="hmm__tree_nested">
-                                <li>Pizza with pineapple</li>
-                                <li>Pizza with beef</li>
-                                <li>Pizza with salami</li>
-                            </ul>
-                        </li>
-                        <li>Sushi</li>
-                    </ul>
-                </li>
-            </ul>
+            <hmm-tree></hmm-tree>
         </section>
         <section class="container" id="dialog_section">
             <hmm-dialog
