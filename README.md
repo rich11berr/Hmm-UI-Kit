@@ -1,2 +1,2 @@
 # Hmm-UI-Kit
-Description here
+This is custom UI-kit on pure JS using web-components
